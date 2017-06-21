@@ -1,5 +1,5 @@
 # ZhiHu
-Imitate ZhiHu Mobile web pages
+Imitate ZhiHu Mobile web pages<br>
 知乎移动端主页
 ====
 短学期移动端APP界面设计
