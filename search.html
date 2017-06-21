@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <!--css-->
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/icons-extra.css" rel="stylesheet">
+    <style type="text/css">
+        .answer{
+            background-color: white;
+        }
+        .one{
+            display: inline;
+            background-color: white;
+            width: 140px;
+            height: 260px;
+            float: left;
+            border: 2px solid gainsboro;
+            border-radius: 16px!important;
+        }
+        .two{
+            margin-top: -20px;
+            text-align: center;
+        }
+        .out{
+            background-color: red;
+            padding: 0;
+        }
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script>
+
+</head>
+<body style="background-color: lightgrey">
+<!--顶部-->
+<div class="container" style="background-color: white">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span><span class="icon-bar"></span>
+                        <span class="icon-bar"></span></button>
+                    <div class="mui-input-row mui-search" style="margin-top: 10px;margin-left: 10px;margin-right: 80px;">
+                        <input type="search" class="mui-input-clear" placeholder="搜索知乎内容">
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#"><span class="mui-icon mui-icon-chatbubble"></span>  提问</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="mui-icon mui-icon-chatboxes"></span>  回答</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="mui-icon mui-icon-compose"></span>  分享</a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html"><span class="mui-icon mui-icon-home"></span>  首页</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- 底部固定框 -->
+<nav class="mui-bar mui-bar-tab" >
+    <a class="mui-tab-item" id="home" style="text-decoration: none">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item mui-active" id="search" style="text-decoration: none">
+        <span class="mui-icon mui-icon-navigate"></span>
+        <span class="mui-tab-label">发现</span>
+    </a>
+    <a class="mui-tab-item" style="text-decoration: none">
+        <span class="mui-icon mui-icon-flag" ></span>
+        <span class="mui-tab-label">市场</span>
+    </a>
+    <a class="mui-tab-item" style="text-decoration: none">
+        <span class="mui-icon mui-icon-chatboxes"></span>
+        <span class="mui-tab-label">通知</span>
+    </a>
+    <a class="mui-tab-item" style="text-decoration: none">
+        <span class="mui-icon mui-icon-bars" ></span>
+        <span class="mui-tab-label" >更多</span>
+    </a>
+</nav>
+<script>
+    //发现页面跳转
+    document.getElementById('search').addEventListener('tap', function() {
+        //打开关于页面
+        mui.openWindow({
+            url: 'search.html',
+            id:'search'
+        });
+    });
+
+    //主页面跳转
+    document.getElementById('home').addEventListener('tap', function() {
+        //打开关于页面
+        mui.openWindow({
+            url: 'index.html',
+            id:'home'
+        });
+    });
+</script>
+
+<!--图片轮换-->
+<!-- 主体部分 -->
+<div class="mui-content" style="margin-top: 60px;margin-bottom: 10px;background-color: white">
+    <!-- 轮播图 -->
+    <div id="slider" class="mui-slider" >
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="img/3.png">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="img/zhihu.jpg">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="img/1.png">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="img/2.png">
+                </a>
+            </div>
+            <!-- 第四张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="img/3.png">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="img/zhihu.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        mui.init({
+            swipeBack:true //启用右滑关闭功能
+        });
+        var slider = mui("#slider");
+        slider.slider({
+            interval: 5000
+
+        });
+    </script>
+</div>
+
+<!-- 图标菜单 -->
+<div style="margin-top: -60px">
+    <ul class="mui-table-view mui-grid-view mui-grid-12">
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 "><a href="#" class="mui-tab-item">
+            <span class="mui-icon mui-icon-map"></span>
+            <div class="mui-media-body">专栏</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon mui-icon-mic"></span>
+            <div class="mui-media-body">Live</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+            <div class="mui-media-body">书店</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon mui-icon-star"></span>
+            <div class="mui-media-body">收藏夹</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon mui-icon-videocam"></span>
+            <div class="mui-media-body">圆桌</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon mui-icon-spinner-cycle mui-spin"></span>
+            <div class="mui-media-body">热门</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon mui-icon-chatbubble"></span>
+            <div class="mui-media-body">话题</div></a></li>
+        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+            <span class="mui-icon mui-icon-person"></span>
+            <div class="mui-media-body">个人</div></a></li>
+    </ul>
+</div>
+
+<!--热门话题-->
+<ul class="mui-table-view" style="margin-top: 10px">
+    <li class="mui-table-view-cell">
+        <strong class="mui-navigate-right"><span class="mui-icon-extra mui-icon-extra-new" style="font-size:medium"></span>   热门话题</strong>
+    </li>
+</ul>
+<ul class="mui-table-view">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" style="text-decoration: none">
+            <img class="mui-media-object mui-pull-left" src="img/arfa.jpg">
+            <div class="mui-media-body">
+                AlphaGo（阿尔法围棋）
+                <p class='mui-ellipsis'>AlphaGo 是一款人工智能围棋程序，由被 Google 收购的 DeepMind 公司开发。曾四次公开对战人类棋手</p>
+            </div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" style="text-decoration: none">
+            <img class="mui-media-object mui-pull-left" src="img/wwdc.jpg">
+            <div class="mui-media-body">
+                WWDC17
+                <p class='mui-ellipsis'>苹果全球开发者大会 WWDC17 在 2017 年 6 月 5 日至 6 月 9 日于美国加利福尼亚州圣何塞举办。.</p>
+            </div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" style="text-decoration: none">
+            <img class="mui-media-object mui-pull-left" src="img/father.jpg">
+            <div class="mui-media-body">
+                爸爸不在家
+                <p class='mui-ellipsis'>6.18 就是父亲节了，当一个公认的「好爸爸」好像很简单，人们对「男性」的要求也鲜少提及与「家庭生活」有关的事宜，似乎那是妻子和妈妈全权负责的领域。.</p>
+            </div>
+        </a>
+    </li>
+</ul>
+
+<!--热门内容-->
+<ul class="mui-table-view" style="margin-top: 10px">
+    <li class="mui-table-view-cell">
+        <strong class="mui-navigate-right"><span class="mui-icon-extra mui-icon-extra-new" style="font-size:medium"></span>   热门内容</strong>
+    </li>
+</ul>
+<div class="answer">
+    <div class="mui-card-header mui-card-media" >
+        <img src="img/user1.jpg" />
+        <div class="mui-media-body">
+            火狼
+        </div>
+    </div>
+    <div class="mui-card-content" style="margin-top: 10px;margin-right: 10px;margin-left: 10px; ">
+        <strong >如何评价中国电视剧版《深夜食堂》？</strong>
+        <p>张驰：要想拍好中国版得让黄渤来演，就开个胶东海鲜大排档，再卖些烤串、花毛、啤酒、鲅鱼饺子。管虎、徐铮、沈腾加班后来这吃吃毛豆、吹吹牛B、摔摔酒瓶子...</p>
+    </div>
+    <div class="mui-card-footer">
+        <a class="mui-tab-item" src="#" style="text-decoration: none;color: gray">
+            <span class="mui-icon-extra mui-icon-extra-heart-filled" style="font-size: medium;"></span>
+            <span class="mui-tab-label">30,820赞同</span>
+        </a>
+        <a class="mui-tab-item" src="#" style="text-decoration: none;color: gray">
+            <span class="mui-icon-extra mui-icon-extra-order" style="font-size: medium"></span>
+            <span class="mui-tab-label">1,758评论</span>
+        </a>
+        <a class="mui-tab-item" src="#" style="text-decoration: none;color: gray">
+            <span class="mui-icon mui-icon-star" ></span>
+            <span class="mui-tab-label">关注问题</span>
+        </a>
+    </div>
+</div>
+
+<!--媒体内容-->
+<div class="answer" style="margin-top: 10px;padding: 10px;">
+    <div style="margin: 10px;">
+        <strong >今日优惠</strong>
+        <p style="font-size: small;color: grey;">精选内容 · 限时特价</p>
+    </div>
+    <div class="container">
+        <div class="out">
+            <div class="one" style="margin-right: 12px;">
+                <div style="margin-top:-10px ;">
+                    <div style="margin-left:10px ;">
+                        <span class="mui-badge mui-badge-danger" style="position: relative;left: 80px;top: 20px;">8折</span>
+                        <img style="margin:10px;margin-left:30px;height: 40%;width: 50%;"  src="img/ershou.jpg" />
+                    </div>
+                    <div class="two">
+                        <h3 style="font-size: small;margin-left: 10px;margin-right:10px;margin-top: 20px;margin-bottom: 20px;">
+                            二手时间
+                        </h3>
+                        <p style="font-size: small;">
+                            S·A·阿列克谢耶维奇
+                        </p>
+                        <p>
+                            <a class="btn btn-primary" href="#">阅读</a>
+                        <p class="btn" style="color: red;margin-top: -5px;">
+                            ¥19.99&nbsp;&nbsp;
+                            <span style="text-decoration:line-through;color: gray;">¥24.99</span>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="one" style="margin-left: 12px;">
+                <div style="margin-top:-10px ;">
+                    <div style="margin-left:10px ;">
+                        <span class="mui-badge mui-badge-danger" style="position: relative;left: 80px;top: 20px;">6折</span>
+                        <img style="margin:10px;margin-left:30px;height: 40%;width: 50%;" src="img/future.jpg" />
+                    </div>
+                    <div class="two">
+                        <h3 style="font-size: small;margin-left: 10px;margin-right:10px;margin-top: 20px;margin-bottom: 5px;">
+                            未来简史：从智人到智神
+                        </h3>
+                        <p style="font-size: small;">
+                            尤瓦尔·赫拉利
+                        </p>
+                        <p>
+                            <a class="btn btn-primary" href="#">阅读</a>
+                        <p class="btn" style="color: red;margin-top: -5px;">
+                            ¥23.99&nbsp;&nbsp;
+                            <span style="text-decoration:line-through;color: gray;">¥40.80</span>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div style="margin: 5px;">
+<p align="center">上次看到这里，点击更新<span class="mui-icon mui-icon-spinner-cycle mui-spin"></span></p>
+</div>
+<br><br><br>
+</body>
+</html>
