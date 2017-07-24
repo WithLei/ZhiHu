@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
-    
+
     <script src="js/mui.min.js"></script>
     <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
@@ -13,11 +13,11 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/icons-extra.css" rel="stylesheet">
 	<style type="text/css">
-		.answer{
+		.answer{ 
 			background-color: white;
 		}
 	</style>
-    
+
     <script type="text/javascript" charset="utf-8">
       	mui.init();
     </script>
@@ -30,15 +30,15 @@
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					 	<span class="sr-only">Toggle navigation</span>
 					 	<span class="icon-bar"></span><span class="icon-bar"></span>
-					 	<span class="icon-bar"></span></button> 
+					 	<span class="icon-bar"></span></button>
 					 	<div class="mui-input-row mui-search" style="margin-top: 10px;margin-left: 10px;margin-right: 80px;">
     					<input type="search" class="mui-input-clear" placeholder="搜索知乎内容">
 						</div>
 				</div>
-				
+
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active">
@@ -50,7 +50,7 @@
 						<li>
 							 <a href="#"><span class="mui-icon mui-icon-compose"></span>  分享</a>
 						</li>
-						
+
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
@@ -58,7 +58,7 @@
 						</li>
 					</ul>
 				</div>
-				
+
 			</nav>
 		</div>
 	</div>
@@ -197,7 +197,7 @@
 			</a>
 		</div>
 	</div>
-	
+
 	<!--知乎Live-->
 <ul class="mui-table-view" style="margin-top: 10px">
     <li class="mui-table-view-cell">
@@ -377,7 +377,7 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					
+
 				}, 1500);
 			}
 //			if (mui.os.plus) {
